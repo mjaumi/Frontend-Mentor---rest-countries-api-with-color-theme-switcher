@@ -5,8 +5,6 @@ const Countries = async () => {
     // fetching all the countries data here
     const countriesData = await getAllCountriesData();
 
-    console.log(countriesData.length);
-
     // rendering the countries container component here
     return (
         <section className='w-[90%] mx-auto pb-10'>

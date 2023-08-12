@@ -8,10 +8,10 @@ const CountryItemCard = ({country}: {country: any}) => {
     // rendering country card component here
     return (
         <div className='bg-white dark:bg-REST-dark-blue shadow-REST-shadow rounded-md overflow-hidden'>
-            <div className=''>
-                <Image className='w-full' src={flags.svg} alt={flags.alt} height={192} width={320}/>
+            <div>
+                <Image className='object-cover w-full h-[220px]' src={flags.svg} alt={flags.alt} height={192} width={320}/>
             </div>
-            <div className='p-4'>
+            <div className='px-6 py-7'>
                 <h4 className='text-xl font-bold'>{name.common}</h4>
                 <div className='my-5'>
                     <p className='font-semibold'>Population: <span className='font-normal'>{population}</span></p>
