@@ -18,6 +18,9 @@ const config: Config = {
         "REST-dark-gray": "#858585",
         "REST-very-light-gray": "#fafafa",
       },
+      boxShadow: {
+        "REST-shadow": "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+      },
     },
   },
   plugins: [],

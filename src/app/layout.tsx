@@ -1,3 +1,4 @@
+import Header from '@/components/header/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${nunito_sans.variable}`}>
       <body className='bg-REST-very-light-gray'>
+        <Header/>
         {children}
       </body>
     </html>
