@@ -1,4 +1,4 @@
-import Header from '@/components/header/Header'
+import Header from '@/components/Header/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
