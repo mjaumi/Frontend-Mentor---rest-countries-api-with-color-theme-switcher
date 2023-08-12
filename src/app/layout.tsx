@@ -2,6 +2,7 @@ import Header from '@/components/Header/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
+import ContextProvider  from '@/utils/ThemeContext'
 
 // initializing the fonts here
 const nunito_sans = Nunito_Sans({
@@ -24,10 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${nunito_sans.variable}`}>
-      <body className='bg-REST-very-light-gray'>
+      <ContextProvider> 
         <Header/>
         {children}
-      </body>
+      </ContextProvider>
     </html>
   )
 }
