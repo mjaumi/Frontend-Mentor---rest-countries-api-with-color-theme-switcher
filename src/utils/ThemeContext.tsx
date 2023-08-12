@@ -2,6 +2,7 @@
 
 import React, { createContext, useState } from 'react';
 
+// interface to declare theme object type
 interface IThemeObj {
   theme: string,
   setTheme: (theme: string) => void,

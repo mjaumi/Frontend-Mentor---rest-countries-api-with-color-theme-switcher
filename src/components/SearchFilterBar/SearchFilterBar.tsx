@@ -17,7 +17,7 @@ const SearchFilterBar = () => {
 
     // rendering search & filter bar section component here
     return (
-        <section className='w-[90%] mx-auto flex justify-between'>
+        <section className='w-[90%] mx-auto flex justify-between py-10'>
             <div className='bg-white dark:bg-REST-dark-blue flex items-center py-5 px-10 rounded-md shadow-REST-shadow w-2/5'>
                 <AiOutlineSearch className='fill-REST-dark-gray dark:fill-white h-6 w-6'/>
                 <input className='outline-none bg-transparent w-full pl-8 text-REST-dark-gray dark:text-white font-semibold' type='text' placeholder='Search for a country...'/>
