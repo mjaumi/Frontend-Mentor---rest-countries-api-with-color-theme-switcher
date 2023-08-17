@@ -9,7 +9,7 @@ const BorderCountriesContainer = async ({countryCodes}: {countryCodes: string[]}
 
     // rendering border countries container component here
     return (
-        <div>
+        <div className='mt-3 xl:mt-0'>
             {
                 borderCountries.length ?
                 borderCountries.map(borderCountry => 
@@ -19,7 +19,7 @@ const BorderCountriesContainer = async ({countryCodes}: {countryCodes: string[]}
                     />    
                 )
                 :
-                <p className='ml-2'>N/A</p>
+                <p className='xl:ml-2'>N/A</p>
             }
         </div>
     );

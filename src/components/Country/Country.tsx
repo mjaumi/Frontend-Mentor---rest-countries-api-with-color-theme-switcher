@@ -16,16 +16,16 @@ const Country = ({country}: {country: Country}) => {
                 <FaArrowLeftLong className='mr-2'/>
                 Back
             </Link>
-            <div className='mt-16 flex justify-between items-center'>
-                <div className='w-1/2 mr-40'>
-                    <Image className='object-cover w-full h-[500px]' src={flags.svg} alt={flags.alt} height={192} width={320}/>
+            <div className='mt-16 flex flex-col xl:flex-row justify-between items-center'>
+                <div className='w-full xl:w-1/2 xl:mr-20 2xl:mr-40'>
+                    <Image className='object-cover w-full h-[250px] md:h-[400px] 2xl:h-[500px]' src={flags.svg} alt={flags.alt} height={192} width={320}/>
                 </div>
-                <div className='w-1/2'>
+                <div className='w-full xl:w-1/2 mt-20 xl:mt-0'>
                     <div>
                         <h3 className='text-3xl font-bold'>{name.common}</h3>
                     </div>
-                    <div className='mt-8 flex justify-between'>
-                        <div className='w-1/2'>
+                    <div className='mt-8 flex flex-col xl:flex-row justify-between'>
+                        <div className='w-full xl:w-1/2'>
                             <p className='font-medium'>
                                 Native Name: <span className='font-normal'>
                                     {Object.values(name.nativeName)[Object.keys(name.nativeName).length - 1].common}
@@ -36,7 +36,7 @@ const Country = ({country}: {country: Country}) => {
                             <p className='font-medium mt-2'>Sub Region: <span className='font-normal'>{subregion}</span></p>
                             <p className='font-medium mt-2'>Capital: <span className='font-normal'>{capital?.length ? capital.join(', ') : 'N/A'}</span></p>
                         </div>
-                        <div className='w-1/2'>
+                        <div className='w-full xl:w-1/2 mt-14 xl:mt-0'>
                             <p className='font-medium'>Top Level Domain: <span className='font-normal'>{tld}</span></p>
                             <p className='font-medium mt-2'>
                                 Currencies: <span className='font-normal'>
@@ -54,7 +54,7 @@ const Country = ({country}: {country: Country}) => {
                             </p>
                         </div>
                     </div>
-                    <div className='flex items-center mt-20'>
+                    <div className='flex flex-col xl:flex-row xl:items-center mt-20'>
                         <p className='font-medium whitespace-nowrap mr-2'>Border Countries: </p>
                         <BorderCountriesContainer countryCodes={borders}/>
                     </div>

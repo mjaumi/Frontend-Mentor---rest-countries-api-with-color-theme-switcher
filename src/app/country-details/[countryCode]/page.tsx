@@ -26,7 +26,7 @@ export default async function DetailsPage({params}: Params) {
 
     // rendering the country details page here
     return (
-        <main className='bg-REST-very-light-gray dark:bg-REST-very-dark-blue min-h-screen text-REST-very-dark-blue-text dark:text-white'>
+        <main className='bg-REST-very-light-gray dark:bg-REST-very-dark-blue min-h-screen text-REST-very-dark-blue-text dark:text-white pb-20'>
             <Country country={country[0]}/>
         </main>
     );

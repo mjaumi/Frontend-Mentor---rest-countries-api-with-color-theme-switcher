@@ -17,7 +17,7 @@ const BorderCountriesButton = ({borderCountry}: {borderCountry: Partial<Country>
 
     // rendering border countries button component here
     return (
-        <button onClick={() => navigateToBorderCountry(cca3)} className='bg-white dark:bg-REST-dark-blue py-1 px-5 shadow-REST-shadow ml-2 mb-2 rounded text-sm hover:opacity-60 duration-300'>
+        <button onClick={() => navigateToBorderCountry(cca3)} className='bg-white dark:bg-REST-dark-blue py-1 px-5 shadow-REST-shadow mr-2 xl:mr-0 xl:ml-2 mb-0 xl:mb-2 my-2 xl:my-0 rounded text-sm hover:opacity-60 duration-300'>
             {name?.common}
         </button>
     );
