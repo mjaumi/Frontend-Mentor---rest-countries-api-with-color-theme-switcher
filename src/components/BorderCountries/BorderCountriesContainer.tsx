@@ -11,12 +11,15 @@ const BorderCountriesContainer = async ({countryCodes}: {countryCodes: string[]}
     return (
         <div>
             {
+                borderCountries.length ?
                 borderCountries.map(borderCountry => 
                     <BorderCountriesButton
                         key={borderCountry.cca3}
                         borderCountry={borderCountry}
                     />    
                 )
+                :
+                <p className='ml-2'>N/A</p>
             }
         </div>
     );

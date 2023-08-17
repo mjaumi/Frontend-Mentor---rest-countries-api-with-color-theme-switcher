@@ -30,7 +30,7 @@ const Country = ({country}: {country: Country}) => {
                             <p className='font-medium mt-2'>Population: <span className='font-normal'>{population.toLocaleString()}</span></p>
                             <p className='font-medium mt-2'>Region: <span className='font-normal'>{region}</span></p>
                             <p className='font-medium mt-2'>Sub Region: <span className='font-normal'>{subregion}</span></p>
-                            <p className='font-medium mt-2'>Capital: <span className='font-normal'>{capital.length ? capital.join(', ') : 'N/A'}</span></p>
+                            <p className='font-medium mt-2'>Capital: <span className='font-normal'>{capital?.length ? capital.join(', ') : 'N/A'}</span></p>
                         </div>
                         <div className='w-1/2'>
                             <p className='font-medium'>Top Level Domain: <span className='font-normal'>{tld}</span></p>
