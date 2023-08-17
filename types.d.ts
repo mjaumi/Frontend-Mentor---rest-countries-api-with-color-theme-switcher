@@ -31,4 +31,5 @@ type Country = {
     svg: string;
     alt: string;
   };
+  cca3: string;
 };

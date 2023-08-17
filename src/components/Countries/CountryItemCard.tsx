@@ -1,13 +1,21 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const CountryItemCard = ({country}: {country: Country}) => {
     // destructuring the country object here
-    const {flags, name, population, region, capital} = country || {};
+    const {flags, name, population, region, capital, cca3} = country || {};
+
+    // integration of next hooks here
+    const router = useRouter();
+
+    const countryDetailsNavHandler = (countryCode: string) => {
+        router.push(`/country-details/${countryCode}`);
+    }
 
     // rendering country card component here
     return (
-        <div className='bg-white dark:bg-REST-dark-blue shadow-REST-shadow rounded-md overflow-hidden'>
+        <div onClick={() => countryDetailsNavHandler(cca3)} className='bg-white dark:bg-REST-dark-blue shadow-REST-shadow rounded-md overflow-hidden cursor-pointer hover:scale-105 duration-300'>
             <div>
                 <Image className='object-cover w-full h-[220px]' src={flags.svg} alt={flags.alt} height={192} width={320}/>
             </div>
