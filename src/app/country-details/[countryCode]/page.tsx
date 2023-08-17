@@ -2,10 +2,21 @@ import Country from "@/components/Country/Country";
 import getCountryByCode from "@/lib/getCountryByCode";
 
 // defining the params type here
-type Params ={
+type Params = {
     params: {
         countryCode: string
     } 
+}
+
+// dynamically generating metadata for details page here
+export async function generateMetadata({params}: Params) {
+    // fetching country data by country code here
+    const countryData: Promise<Country[]> = getCountryByCode(params.countryCode);
+    const country = await countryData;
+    
+    return {
+        title: country[0].name.common + ' Details || REST Countries API'
+    };
 }
 
 export default async function DetailsPage({params}: Params) {
