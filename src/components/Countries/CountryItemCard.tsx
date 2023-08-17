@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const CountryItemCard = ({country}: {country: any}) => {
+const CountryItemCard = ({country}: {country: Country}) => {
     // destructuring the country object here
     const {flags, name, population, region, capital} = country || {};
 
@@ -14,9 +14,15 @@ const CountryItemCard = ({country}: {country: any}) => {
             <div className='px-6 py-7'>
                 <h4 className='text-xl font-bold'>{name.common}</h4>
                 <div className='my-5'>
-                    <p className='font-semibold'>Population: <span className='font-normal'>{population}</span></p>
+                    <p className='font-semibold'>Population: <span className='font-normal'>{population.toLocaleString()}</span></p>
                     <p className='font-semibold mt-1'>Region: <span className='font-normal'>{region}</span></p>
-                    <p className='font-semibold mt-1'>Capital: <span className='font-normal'>{capital}</span></p>
+                    <p className='font-semibold mt-1'>
+                        Capital: <span className='font-normal'>
+                            {
+                                capital.length ? capital.join(', ') : 'N/A'
+                            }
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
