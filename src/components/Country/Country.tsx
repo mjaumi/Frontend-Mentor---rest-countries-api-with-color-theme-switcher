@@ -55,7 +55,7 @@ const Country = ({country}: {country: Country}) => {
                         </div>
                     </div>
                     <div className='flex items-center mt-20'>
-                        <p className='font-medium'>Border Countries: </p>
+                        <p className='font-medium whitespace-nowrap mr-2'>Border Countries: </p>
                         <BorderCountriesContainer countryCodes={borders}/>
                     </div>
                 </div>
