@@ -22,16 +22,23 @@ const CountriesContainer = ({countries}: {countries: Country[]}) => {
 
     // rendering countries container component here
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 xl:gap-24'>
-                {
-                    countries
-                    .filter(searchCountry)
-                    .filter(filterCountries)
-                    .map((country: Country) => 
-                        <CountryItemCard key={country.name.common} country={country}/>
-                    )
-                }
-            </div>
+        <>
+            {
+                countries.filter(searchCountry).length ?
+                    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 xl:gap-24'>
+                        {
+                            countries
+                            .filter(searchCountry)
+                            .filter(filterCountries)
+                            .map((country: Country) => 
+                                <CountryItemCard key={country.name.common} country={country}/>
+                            )
+                        }
+                    </div>
+                    :
+                    <h2 className='font-bold opacity-80 text-center text-3xl'>No Such Country Found!</h2>
+            }
+        </>
     );
 };
 
