@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <header className='sticky top-0 bg-white dark:bg-REST-dark-blue h-20 shadow-REST-shadow z-[999]'>
             <div className='w-[90%] h-full flex justify-between items-center mx-auto text-REST-very-dark-blue-text dark:text-white'>
-                <h1 className='text-2xl font-extrabold'>Where in the world?</h1>
+                <h1 className='text-lg md:text-2xl font-extrabold'>Where in the world?</h1>
                 <button onClick={() => theme?.theme === 'light' ? toggleThemeHandler('dark') : toggleThemeHandler('light')} className='flex items-center hover:opacity-70 duration-300 font-semibold'>
                     {
                         theme?.theme === 'dark' ?

@@ -24,20 +24,42 @@ const SearchFilterBar = () => {
 
     // rendering search & filter bar section component here
     return (
-        <section className='w-[90%] mx-auto flex justify-between py-10'>
-            <div className='bg-white dark:bg-REST-dark-blue flex items-center py-5 px-10 rounded-md shadow-REST-shadow w-2/5'>
+        <section className='w-[90%] mx-auto flex flex-col md:flex-row justify-between py-10'>
+            <div className='bg-white dark:bg-REST-dark-blue flex items-center py-5 px-10 rounded-md shadow-REST-shadow w-full md:w-3/5 xl:w-2/5'>
                 <AiOutlineSearch className='fill-REST-dark-gray dark:fill-white h-6 w-6'/>
                 <input onChange={e => searchContext?.setSearch(e.target.value)} className='outline-none bg-transparent w-full pl-8 text-REST-dark-gray dark:text-white font-semibold' type='text' placeholder='Search for a country...'/>
             </div>
-            <div onClick={() => setShowOptions(!showOptions)} className='relative bg-white dark:bg-REST-dark-blue flex items-center justify-between py-5 px-5 rounded-md shadow-REST-shadow w-[200px] hover:cursor-pointer'>
+            <div onClick={() => setShowOptions(!showOptions)} className='relative bg-white dark:bg-REST-dark-blue flex items-center justify-between py-5 px-5 rounded-md shadow-REST-shadow w-1/2 md:w-[200px] hover:cursor-pointer mt-10 md:mt-0'>
                 <p className='font-semibold capitalize'>{filterValue}</p>
+
                 <BiSolidChevronDown className={`${showOptions && 'rotate-180'} duration-300`}/>
+
                 <div className={`absolute top-full left-0 capitalize bg-white dark:bg-REST-dark-blue w-full rounded-md shadow-REST-shadow mt-1 p-4 font-semibold origin-top ${showOptions ? 'scale-y-100' : 'scale-y-0'} duration-300`}>
-                    <p onClick={() => filterByRegionHandler('africa')} className='hover:cursor-pointer hover:opacity-50 duration-300'>africa</p>
-                    <p onClick={() => filterByRegionHandler('americas')} className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>americas</p>
-                    <p onClick={() => filterByRegionHandler('asia')} className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>asia</p>
-                    <p onClick={() => filterByRegionHandler('europe')} className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>europe</p>
-                    <p onClick={() => filterByRegionHandler('oceania')} className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>oceania</p>
+                    <p 
+                        onClick={() => filterByRegionHandler('africa')} 
+                        className='hover:cursor-pointer hover:opacity-50 duration-300'>
+                        africa
+                    </p>
+                    <p 
+                        onClick={() => filterByRegionHandler('americas')} 
+                        className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>
+                        americas
+                        </p>
+                    <p 
+                        onClick={() => filterByRegionHandler('asia')} 
+                        className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>
+                        asia
+                    </p>
+                    <p 
+                        onClick={() => filterByRegionHandler('europe')} 
+                        className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>
+                        europe
+                    </p>
+                    <p 
+                        onClick={() => filterByRegionHandler('oceania')} 
+                        className='mt-1 hover:cursor-pointer hover:opacity-50 duration-300'>
+                        oceania
+                    </p>
                 </div>
             </div>
         </section>
