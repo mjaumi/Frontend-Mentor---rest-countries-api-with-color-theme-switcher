@@ -9,6 +9,7 @@ const CountryItemCard = ({country}: {country: Country}) => {
     // integration of next hooks here
     const router = useRouter();
 
+    // this function is navigating user to country details page
     const countryDetailsNavHandler = (countryCode: string) => {
         router.push(`/country-details/${countryCode}`);
     }
