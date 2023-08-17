@@ -26,7 +26,11 @@ const Country = ({country}: {country: Country}) => {
                     </div>
                     <div className='mt-8 flex justify-between'>
                         <div className='w-1/2'>
-                            <p className='font-medium'>Native Name: <span className='font-normal'>SA</span></p>
+                            <p className='font-medium'>
+                                Native Name: <span className='font-normal'>
+                                    {Object.values(name.nativeName)[Object.keys(name.nativeName).length - 1].common}
+                                </span>
+                            </p>
                             <p className='font-medium mt-2'>Population: <span className='font-normal'>{population.toLocaleString()}</span></p>
                             <p className='font-medium mt-2'>Region: <span className='font-normal'>{region}</span></p>
                             <p className='font-medium mt-2'>Sub Region: <span className='font-normal'>{subregion}</span></p>
